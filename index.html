@@ -1,62 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Rodi UI</title>
-</head>
-<body>
+  </head>
+  <body class="bg-gray-700">
+    <header class="bg-gray-800 text-white py-4">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center"
+      >
+        <h1 class="text-3xl font-bold">Interfaz Grafica RoDi 2023</h1>
+        <a href="#" class="text-gray-300 hover:text-gray-100">Cerrar sesión</a>
+      </div>
+    </header>
 
+    <div class="flex justify-center items-center h-screen">
+      <div class="grid grid-cols-3 grid-rows-3 gap-4">
+        <div class="col-start-2 row-start-1">
+          <button
+            class="moveForw bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-32 h-24"
+          >
+            Adelante
+          </button>
+        </div>
+        <div class="col-start-1 row-start-2">
+          <button
+            class="moveLeft bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full w-32 h-24"
+          >
+            Izquierda
+          </button>
+        </div>
+        <div class="col-start-2 row-start-3">
+          <button
+            class="moveBackw bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full w-32 h-24"
+          >
+            Atras
+          </button>
+        </div>
+        <div class="col-start-3 row-start-2">
+          <button
+            class="moveRight bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-full w-32 h-24"
+          >
+            Derecha
+          </button>
+        </div>
+      </div>
+    </div>
 
+    <div>
+      <footer class="bg-gray-800 text-white py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p class="text-center text-gray-300">
+            Rodi Workshop , Parawhy &copy; 2023
+          </p>
+        </div>
+      </footer>
+    </div>
 
     <script>
-        const moveForw = document.querySelector(".moveForw")
-        const moveBackw = document.querySelector(".moveBackw")
-        const moveLeft = document.querySelector(".moveLeft")
-        const moveRight = document.querySelector(".moveRight")
+      const moveForw = document.querySelector(".moveForw");
+      const moveBackw = document.querySelector(".moveBackw");
+      const moveLeft = document.querySelector(".moveLeft");
+      const moveRight = document.querySelector(".moveRight");
 
-        // Forward
-        moveForw.addEventListener("mousedown", () => {
-            let response = fetch("http://192.168.4.1:1234/3/100/100/", {
-                method: "GET"
-            })
-        })
+      // Forward
+      moveForw.addEventListener("mousedown", () => {
+        let response = fetch("http://192.168.4.1:1234/3/100/100/", {
+          method: "GET",
+        });
+      });
 
-        moveForw.addEventListener("mouseup", () => {
-            let response = fetch("http://192.168.4.1:1234/3/0/0/", {
-                method: "GET"
-            })
-        })
+      moveForw.addEventListener("mouseup", () => {
+        let response = fetch("http://192.168.4.1:1234/3/0/0/", {
+          method: "GET",
+        });
+      });
 
-        // Backward
-        moveBackw.addEventListener("mousedown", () => {
-            let response = fetch("http://192.168.4.1:1234/3/-100/-100/", {
-                method: "GET"
-            })
-        })
+      // Backward
+      moveBackw.addEventListener("mousedown", () => {
+        let response = fetch("http://192.168.4.1:1234/3/-100/-100/", {
+          method: "GET",
+        });
+      });
 
-        moveBackw.addEventListener("mouseup", () => {
-            let response = fetch("http://192.168.4.1:1234/3/0/0/", {
-                method: "GET"
-            })
-        })
+      moveBackw.addEventListener("mouseup", () => {
+        let response = fetch("http://192.168.4.1:1234/3/0/0/", {
+          method: "GET",
+        });
+      });
 
-        // Left
-        moveLeft.addEventListener("mousedown", () => {
-            let response = fetch("http://192.168.4.1:1234/3/-100/100/", {
-                method: "GET"
-            })
-        })
+      // Left
+      moveLeft.addEventListener("mousedown", () => {
+        let response = fetch("http://192.168.4.1:1234/3/-100/100/", {
+          method: "GET",
+        });
+      });
 
-        // Right
-        moveRight.addEventListener("mousedown", () => {
-            let response = fetch("http://192.168.4.1:1234/3/100/-100/ ", {
-                method: "GET"
-            })
-        })
-
+      // Right
+      moveRight.addEventListener("mousedown", () => {
+        let response = fetch("http://192.168.4.1:1234/3/100/-100/ ", {
+          method: "GET",
+        });
+      });
     </script>
-
-</body>
+  </body>
 </html>
